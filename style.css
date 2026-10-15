@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #9f1951;
+    background: #f4f7f8;
+}
+
+.navbar {
+    background: #4b0831;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+#navLinks {
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+#navLinks a {
+    color: white;
+    text-decoration: none;
+}
+
+#navLinks a:hover {
+    text-decoration: underline;
+}
+
+#menuButton {
+    display: none;
+    padding: 6px 12px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 350px;
+    padding: 90px 20px;
+    text-align: center;
+    background: #d9f0ec;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.button {
+    display: inline-block;
+    background: #2f0c29;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background: #7d3679;
+}
+
+.section {
+    padding: 55px 8%;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 22px;
+    color: #570937;
+}
+
+.section > p {
+    max-width: 750px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    overflow-wrap: anywhere;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+#contactForm {
+    max-width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c8c6;
+    border-radius: 5px;
+    font: inherit;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    outline: 2px solid #741252;
+    outline-offset: 2px;
+}
+
+#formMessage {
+    overflow-wrap: anywhere;
+}
+
+footer {
+    background: #8f0f5c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    #menuButton {
+        display: block;
+    }
+
+    #navLinks {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    #navLinks.open {
+        display: flex;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .hero {
+        padding: 65px 20px;
+    }
+}
